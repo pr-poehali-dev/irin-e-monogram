@@ -317,7 +317,12 @@ export default function Index() {
           <p className="font-main font-medium tracking-[0.22em] uppercase text-sm" style={{ color: C.dark }}>EFIMOVA IRINA</p>
         </div>
         <p className="font-display italic text-xs mb-1" style={{ color: C.muted }}>с. Корнилово, ул. Лучистая 52</p>
-        <p className="font-display italic text-xs mb-5" style={{ color: C.muted }}>+7 913 865-69-61</p>
+        <p className="font-display italic text-xs mb-4" style={{ color: C.muted }}>+7 913 865-69-61</p>
+        <div className="inline-flex items-center gap-3 mb-5 px-5 py-2.5" style={{ backgroundColor: C.bg, border: "1px solid #E8DCC8" }}>
+          <Icon name="Clock" size={13} style={{ color: C.sage }} />
+          <span className="font-main font-medium text-xs tracking-[0.12em] uppercase" style={{ color: C.dark }}>9:00 — 21:00</span>
+          <span className="font-display italic text-xs" style={{ color: C.muted }}>· по предварительной записи</span>
+        </div>
         <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
         <p className="font-display italic text-xs mb-3" style={{ color: C.muted }}>С теплом к вашей красоте</p>
         <a
