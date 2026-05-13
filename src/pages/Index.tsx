@@ -58,13 +58,13 @@ function Logo() {
   return (
     <div className="flex flex-col items-center select-none">
       <Monogram />
-      <p className="font-display italic text-xs tracking-[0.38em] mb-1" style={{ color: C.sage }}>
-        NAIL STUDIO
-      </p>
-      <h1 className="font-main font-medium tracking-[0.26em] text-4xl md:text-6xl uppercase mb-1" style={{ color: C.dark }}>
-        EFIMOVA
+      <h1 className="font-display italic text-4xl md:text-6xl tracking-[0.18em] mb-3" style={{ color: C.sage }}>
+        Nail Studio
       </h1>
-      <p className="font-display italic text-2xl md:text-3xl tracking-[0.28em] mb-7" style={{ color: C.sage }}>
+      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-0.5" style={{ color: C.dark }}>
+        EFIMOVA
+      </p>
+      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-7" style={{ color: C.dark }}>
         IRINA
       </p>
       <div className="flex items-center gap-4 mb-3">
