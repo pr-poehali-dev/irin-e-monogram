@@ -218,6 +218,72 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <section className="py-20 px-6" style={{ backgroundColor: C.bg }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.sage }}>Отзывы</p>
+            <h2 className="font-main font-medium tracking-[0.18em] text-3xl uppercase mb-4" style={{ color: C.dark }}>Говорят клиенты</h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
+              <Icon name="Star" size={14} style={{ color: C.sage }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Анастасия М.",
+                date: "март 2025",
+                text: "Ирина — настоящий мастер своего дела. Маникюр держится уже четыре недели, ни одного скола. Атмосфера в студии очень уютная, всегда хочется вернуться.",
+                stars: 5,
+              },
+              {
+                name: "Екатерина В.",
+                date: "апрель 2025",
+                text: "Делала наращивание и nail-арт. Результат превзошёл все ожидания — тонко, аккуратно, именно то, что хотела. Однозначно буду постоянным клиентом.",
+                stars: 5,
+              },
+              {
+                name: "Ольга Р.",
+                date: "май 2025",
+                text: "Приятная студия, чистота и порядок на высшем уровне. Аппаратный маникюр прошёл абсолютно безболезненно. Спасибо Ирине за профессионализм и заботу!",
+                stars: 5,
+              },
+            ].map((review, i) => (
+              <div
+                key={i}
+                className="bg-white p-7 flex flex-col gap-4"
+                style={{ border: "1px solid #D6E0D3" }}
+              >
+                {/* Stars */}
+                <div className="flex gap-1">
+                  {Array.from({ length: review.stars }).map((_, s) => (
+                    <Icon key={s} name="Star" size={13} style={{ color: C.sage }} />
+                  ))}
+                </div>
+
+                {/* Text */}
+                <p className="font-display italic text-sm leading-relaxed flex-1" style={{ color: C.muted }}>
+                  «{review.text}»
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center justify-between pt-3" style={{ borderTop: "1px solid #EBF0E6" }}>
+                  <span className="font-main font-medium text-xs tracking-wide uppercase" style={{ color: C.dark }}>
+                    {review.name}
+                  </span>
+                  <span className="font-display italic text-xs" style={{ color: C.muted }}>
+                    {review.date}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-6 text-center" style={{ backgroundColor: C.dark }}>
         <p className="font-display italic text-sm tracking-widest mb-4" style={{ color: C.sage }}>Запись онлайн</p>
