@@ -254,6 +254,77 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="py-20 px-6" style={{ backgroundColor: "hsl(35, 45%, 94%)" }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: "#CDB396" }}>
+              Наши работы
+            </p>
+            <h2 className="font-main font-medium tracking-[0.18em] text-3xl uppercase mb-4" style={{ color: "#46413E" }}>
+              Галерея
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12" style={{ backgroundColor: "#CDB396", opacity: 0.4 }} />
+              <Icon name="Heart" size={14} style={{ color: "#CDB396" }} />
+              <div className="h-px w-12" style={{ backgroundColor: "#CDB396", opacity: 0.4 }} />
+            </div>
+          </div>
+
+          {/* Mosaic grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {/* Large top-left */}
+            <div className="col-span-1 row-span-2 md:col-span-1 overflow-hidden" style={{ aspectRatio: "3/4" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/d4b365a8-1f13-40a4-ac81-5ca159da94ad.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Top center */}
+            <div className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/59836755-e916-43a5-86cb-f14c91599a3f.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Top right */}
+            <div className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/4be2c87b-3d00-44b9-ac2c-6490c0094389.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Bottom center */}
+            <div className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/11de364e-6a68-4e63-b906-e675634bb498.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Bottom right */}
+            <div className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/c87bbb90-de48-4998-bb13-e28916980969.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            {/* Wide bottom */}
+            <div className="col-span-2 md:col-span-3 overflow-hidden" style={{ aspectRatio: "16/5" }}>
+              <img
+                src="https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/6e9f7acc-7e6e-471a-a5e3-262711dba950.jpg"
+                alt="Nail art"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-6 text-center" style={{ backgroundColor: "hsl(25, 15%, 22%)" }}>
         <p className="font-display italic text-sm tracking-widest mb-4" style={{ color: "hsl(28, 40%, 68%)" }}>
