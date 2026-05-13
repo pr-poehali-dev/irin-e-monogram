@@ -50,29 +50,64 @@ const services = [
 
 function Monogram() {
   return (
-    <div className="relative flex items-center justify-center w-24 h-24 mx-auto mb-6">
-      <svg viewBox="0 0 96 84" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24">
-        <text
-          x="2"
-          y="72"
-          fontFamily="Montserrat, sans-serif"
-          fontWeight="600"
-          fontSize="66"
-          fill="hsl(25, 15%, 22%)"
-        >
-          И
-        </text>
-        <text
-          x="44"
-          y="72"
-          fontFamily="Cormorant Infant, serif"
-          fontWeight="300"
-          fontSize="66"
-          fill="hsl(28, 40%, 68%)"
-        >
-          Е
-        </text>
+    <div className="relative flex items-center justify-center mx-auto mb-6" style={{ width: 120, height: 120 }}>
+      <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
+        {/* Вертикальная линия буквы И — глубокий графит */}
+        <line x1="52" y1="22" x2="52" y2="98" stroke="#46413E" strokeWidth="2.8" strokeLinecap="round"/>
+        {/* Диагональная линия буквы И */}
+        <line x1="52" y1="22" x2="68" y2="98" stroke="#46413E" strokeWidth="2.8" strokeLinecap="round"/>
+        <line x1="68" y1="22" x2="68" y2="98" stroke="#46413E" strokeWidth="2.8" strokeLinecap="round"/>
+        {/* Мягкая Е — тёплый латте, вписана в вертикаль */}
+        <path
+          d="M 68 30 C 96 30, 96 57, 68 57 C 92 57, 92 84, 68 84"
+          fill="none"
+          stroke="#CDB396"
+          strokeWidth="2.8"
+          strokeLinecap="round"
+        />
       </svg>
+    </div>
+  );
+}
+
+function Logo() {
+  return (
+    <div className="flex flex-col items-center select-none">
+      <Monogram />
+      <p
+        className="font-display italic text-xs tracking-[0.32em] mb-1"
+        style={{ color: "#CDB396" }}
+      >
+        СТУДИЯ МАНИКЮРА
+      </p>
+      <h1
+        className="font-main font-medium tracking-[0.28em] text-4xl md:text-6xl uppercase mb-1"
+        style={{ color: "#46413E" }}
+      >
+        ЕФИМОВОЙ
+      </h1>
+      <p
+        className="font-display italic text-xs tracking-[0.32em] mb-6"
+        style={{ color: "#CDB396" }}
+      >
+        ИРИНЫ
+      </p>
+      <div className="flex items-center gap-4 mb-2">
+        <div className="h-px w-14" style={{ backgroundColor: "#CDB396", opacity: 0.5 }} />
+        <span
+          className="font-main font-light text-[11px] tracking-[0.28em] uppercase"
+          style={{ color: "#46413E" }}
+        >
+          Маникюр • Педикюр • Брови
+        </span>
+        <div className="h-px w-14" style={{ backgroundColor: "#CDB396", opacity: 0.5 }} />
+      </div>
+      <p
+        className="font-display italic text-base"
+        style={{ color: "#CDB396" }}
+      >
+        «С теплом к вашей красоте»
+      </p>
     </div>
   );
 }
@@ -99,56 +134,25 @@ export default function Index() {
           />
         </div>
 
-        <div className="relative z-10 text-center px-6">
-          <div className="opacity-0 animate-fade-up" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-            <Monogram />
-          </div>
-
-          <p
-            className="font-display italic text-sm tracking-[0.35em] mb-1 opacity-0 animate-fade-up"
-            style={{ color: "hsl(28, 40%, 68%)", animationDelay: "0.2s", animationFillMode: "forwards" }}
-          >
-            СТУДИЯ МАНИКЮРА
-          </p>
-
-          <h1
-            className="font-main font-medium tracking-[0.22em] text-4xl md:text-6xl uppercase mb-1 opacity-0 animate-fade-up"
-            style={{ color: "hsl(25, 15%, 22%)", animationDelay: "0.3s", animationFillMode: "forwards" }}
-          >
-            ЕФИМОВОЙ
-          </h1>
-
-          <p
-            className="font-display italic text-sm tracking-[0.35em] mb-8 opacity-0 animate-fade-up"
-            style={{ color: "hsl(28, 40%, 68%)", animationDelay: "0.4s", animationFillMode: "forwards" }}
-          >
-            ИРИНЫ
-          </p>
+        <div
+          className="relative z-10 text-center px-6 opacity-0 animate-fade-up"
+          style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
+        >
+          <Logo />
 
           <div
-            className="flex items-center justify-center gap-4 mb-10 opacity-0 animate-fade-up"
+            className="flex flex-col sm:flex-row gap-4 justify-center mt-10 opacity-0 animate-fade-up"
             style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
-          >
-            <div className="h-px w-16" style={{ backgroundColor: "hsl(28, 40%, 68%, 0.5)" }} />
-            <span className="font-display italic text-sm" style={{ color: "hsl(25, 10%, 50%)" }}>
-              С теплом к вашей красоте
-            </span>
-            <div className="h-px w-16" style={{ backgroundColor: "hsl(28, 40%, 68%, 0.5)" }} />
-          </div>
-
-          <div
-            className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
           >
             <button
               className="px-10 py-3.5 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300 hover:shadow-lg"
-              style={{ backgroundColor: "hsl(25, 15%, 22%)", color: "hsl(35, 30%, 97%)" }}
+              style={{ backgroundColor: "#46413E", color: "#FAF6F2" }}
             >
               Записаться
             </button>
             <button
               className="px-10 py-3.5 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300"
-              style={{ border: "1px solid hsl(28, 40%, 68%)", color: "hsl(25, 15%, 22%)" }}
+              style={{ border: "1px solid #CDB396", color: "#46413E" }}
             >
               Услуги и цены
             </button>
