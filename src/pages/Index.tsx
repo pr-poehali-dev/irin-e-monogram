@@ -64,7 +64,7 @@ function Logo() {
       <h1 className="font-main font-medium tracking-[0.26em] text-4xl md:text-6xl uppercase mb-1" style={{ color: C.dark }}>
         EFIMOVA
       </h1>
-      <p className="font-display italic text-xs tracking-[0.38em] mb-7" style={{ color: C.sage }}>
+      <p className="font-display italic text-2xl md:text-3xl tracking-[0.28em] mb-7" style={{ color: C.sage }}>
         IRINA
       </p>
       <div className="flex items-center gap-4 mb-3">
