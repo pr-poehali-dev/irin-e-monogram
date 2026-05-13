@@ -181,9 +181,15 @@ export default function Index() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="font-main font-medium text-sm" style={{ color: C.dark }}>{service.price}</span>
-                  <button className="font-display italic text-xs tracking-wide transition-colors duration-200" style={{ color: C.sageMid }}>
+                  <a
+                    href="https://max.ru/im?sel=%2B79138656961"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-display italic text-xs tracking-wide transition-colors duration-200 hover:opacity-70"
+                    style={{ color: C.sageMid }}
+                  >
                     Записаться →
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -299,15 +305,31 @@ export default function Index() {
         <h2 className="font-main font-medium tracking-[0.18em] text-2xl uppercase mb-3" style={{ color: C.cream }}>
           Запишитесь на приём
         </h2>
-        <p className="font-display italic text-base mb-8 max-w-md mx-auto" style={{ color: "#A8B8A5" }}>
-          Выберите удобное время и услугу — ответим в течение часа
+        <p className="font-display italic text-base mb-8 max-w-md mx-auto" style={{ color: "#C4B49A" }}>
+          Напишите в мессенджер — ответим быстро и выберем удобное время
         </p>
-        <button
-          className="px-12 py-4 font-main font-medium tracking-[0.15em] text-sm uppercase transition-all duration-300 hover:opacity-90"
-          style={{ backgroundColor: C.sage, color: C.dark }}
-        >
-          Написать в WhatsApp
-        </button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://max.ru/im?sel=%2B79138656961"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-10 py-4 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300 hover:opacity-90"
+            style={{ backgroundColor: C.sage, color: C.dark }}
+          >
+            <Icon name="MessageCircle" size={16} />
+            Записаться через Max
+          </a>
+          <a
+            href="https://wa.me/79138656961"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-3 px-10 py-4 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300 hover:opacity-90"
+            style={{ backgroundColor: "transparent", color: C.cream, border: `1px solid ${C.sage}` }}
+          >
+            <Icon name="Phone" size={16} />
+            WhatsApp
+          </a>
+        </div>
       </section>
 
       {/* Footer */}
