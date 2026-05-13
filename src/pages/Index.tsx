@@ -3,16 +3,17 @@ import Icon from "@/components/ui/icon";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/fa1fbc0a-9a4a-4633-b66f-8758c3257068.jpg";
 const HANDS_IMAGE = "https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/f4b41a04-5fab-41af-9e5e-7253defe5a04.jpg";
 
-// Palette: vanilla + dark chocolate
+// Palette: emerald + gold
 const C = {
-  bg: "#FAF6EE",
-  bgAlt: "#F2EBD9",
-  dark: "#3B2314",
-  sage: "#C9A97A",
-  sageMid: "#A8834E",
-  muted: "#8C7155",
-  cream: "#FDF9F2",
+  bg: "#F5F3EE",
+  bgAlt: "#EEF0EB",
+  dark: "#1A3530",
+  sage: "#2D6B5C",
+  sageMid: "#3D8A76",
+  muted: "#5A7A72",
+  cream: "#FAFAF6",
   white: "#FFFFFF",
+  gold: "#C9A96E",
 };
 
 const services = [
@@ -28,24 +29,24 @@ function Monogram() {
   return (
     <div style={{ width: 130, height: 110, margin: "0 auto 8px" }}>
       <svg viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg" width="130" height="110">
-        {/* I — Cormorant, тонкие засечки, тёмный */}
+        {/* I — Cormorant, тонкие засечки, светлый (Hero на тёмном фоне) */}
         <text
           x="22"
           y="92"
           fontFamily="'Cormorant Infant', 'Georgia', serif"
           fontSize="96"
           fontWeight="300"
-          fill={C.dark}
+          fill="#F5F3EE"
           letterSpacing="-2"
         >I</text>
-        {/* E — Cormorant, шалфейный, чуть смещена и прозрачнее для наложения */}
+        {/* E — Cormorant, золотой, чуть смещена и прозрачнее для наложения */}
         <text
           x="58"
           y="92"
           fontFamily="'Cormorant Infant', 'Georgia', serif"
           fontSize="96"
           fontWeight="300"
-          fill={C.sage}
+          fill={C.gold}
           letterSpacing="-2"
           opacity="0.92"
         >E</text>
@@ -58,23 +59,23 @@ function Logo() {
   return (
     <div className="flex flex-col items-center select-none">
       <Monogram />
-      <h1 className="font-display italic text-4xl md:text-6xl tracking-[0.18em] mb-3" style={{ color: C.sage }}>
+      <h1 className="font-display italic text-4xl md:text-6xl tracking-[0.18em] mb-3" style={{ color: C.gold }}>
         Nail Studio
       </h1>
-      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-0.5" style={{ color: C.dark }}>
+      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-0.5" style={{ color: C.cream }}>
         EFIMOVA
       </p>
-      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-7" style={{ color: C.dark }}>
+      <p className="font-main font-medium tracking-[0.26em] text-xl md:text-2xl uppercase mb-7" style={{ color: C.cream }}>
         IRINA
       </p>
       <div className="flex items-center gap-4 mb-3">
-        <div className="h-px w-14" style={{ backgroundColor: C.sage, opacity: 0.45 }} />
-        <span className="font-main font-light text-[10px] tracking-[0.3em] uppercase" style={{ color: C.muted }}>
+        <div className="h-px w-14" style={{ backgroundColor: C.gold, opacity: 0.55 }} />
+        <span className="font-main font-light text-[10px] tracking-[0.3em] uppercase" style={{ color: "#B0C0BC" }}>
           Маникюр · Педикюр · Брови
         </span>
-        <div className="h-px w-14" style={{ backgroundColor: C.sage, opacity: 0.45 }} />
+        <div className="h-px w-14" style={{ backgroundColor: C.gold, opacity: 0.55 }} />
       </div>
-      <p className="font-display italic text-base" style={{ color: C.sageMid }}>
+      <p className="font-display italic text-base" style={{ color: C.gold }}>
         «С теплом к вашей красоте»
       </p>
     </div>
@@ -89,7 +90,7 @@ export default function Index() {
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img src={HERO_IMAGE} alt="Студия маникюра" className="w-full h-full object-cover" />
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(244,247,240,0.82)" }} />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(26,53,48,0.72)" }} />
         </div>
 
         <div
@@ -103,13 +104,13 @@ export default function Index() {
           >
             <button
               className="px-10 py-3.5 font-main font-medium tracking-[0.14em] text-sm uppercase transition-all duration-300 hover:shadow-lg hover:opacity-90"
-              style={{ backgroundColor: C.dark, color: C.cream }}
+              style={{ backgroundColor: C.gold, color: C.dark }}
             >
               Записаться
             </button>
             <button
               className="px-10 py-3.5 font-main font-medium tracking-[0.14em] text-sm uppercase transition-all duration-300 hover:bg-opacity-20"
-              style={{ border: `1px solid ${C.sage}`, color: C.dark }}
+              style={{ border: `1px solid ${C.gold}`, color: C.cream }}
             >
               Услуги и цены
             </button>
@@ -117,8 +118,8 @@ export default function Index() {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2" style={{ opacity: 0.45 }}>
-          <span className="font-display italic text-xs tracking-widest" style={{ color: C.muted }}>scroll</span>
-          <div className="w-px h-10 animate-pulse" style={{ backgroundColor: C.sage }} />
+          <span className="font-display italic text-xs tracking-widest" style={{ color: "#B0C0BC" }}>scroll</span>
+          <div className="w-px h-10 animate-pulse" style={{ backgroundColor: C.gold }} />
         </div>
       </section>
 
@@ -126,7 +127,7 @@ export default function Index() {
       <section className="py-16 px-6" style={{ backgroundColor: C.bgAlt }}>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
-            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.sage }}>
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.gold }}>
               О студии
             </p>
             <h2 className="font-main font-medium tracking-[0.15em] text-2xl uppercase mb-4" style={{ color: C.dark }}>
@@ -135,7 +136,7 @@ export default function Index() {
             <p className="font-display text-base leading-relaxed mb-4" style={{ color: C.muted }}>
               Студия маникюра Ирины Ефимовой — это пространство, где каждая деталь продумана для вашего комфорта. Стерильные инструменты, премиальные материалы и внимательный подход к каждой гостье.
             </p>
-            <p className="font-display italic text-sm" style={{ color: C.sageMid }}>
+            <p className="font-display italic text-sm" style={{ color: C.sage }}>
               Более 5 лет опыта · Более 500 довольных клиентов
             </p>
           </div>
@@ -149,12 +150,12 @@ export default function Index() {
       <section className="py-20 px-6" id="services" style={{ backgroundColor: C.bg }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.sage }}>Прайс-лист</p>
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.gold }}>Прайс-лист</p>
             <h2 className="font-main font-medium tracking-[0.18em] text-3xl uppercase mb-4" style={{ color: C.dark }}>Услуги</h2>
             <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
-              <Icon name="Sparkles" size={14} style={{ color: C.sage }} />
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
+              <Icon name="Sparkles" size={14} style={{ color: C.gold }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
             </div>
           </div>
 
@@ -163,13 +164,13 @@ export default function Index() {
               <div
                 key={i}
                 className="bg-white p-7 hover:shadow-md transition-all duration-300 cursor-pointer"
-                style={{ border: `1px solid #D6E0D3` }}
+                style={{ border: `1px solid #C8D8D0` }}
                 onMouseEnter={e => (e.currentTarget.style.borderColor = C.sage)}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = "#D6E0D3")}
+                onMouseLeave={e => (e.currentTarget.style.borderColor = "#C8D8D0")}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-10 h-10 flex items-center justify-center" style={{ backgroundColor: C.bgAlt }}>
-                    <Icon name={service.icon as "Sparkles"} size={18} style={{ color: C.sageMid }} fallback="Sparkles" />
+                    <Icon name={service.icon as "Sparkles"} size={18} style={{ color: C.sage }} fallback="Sparkles" />
                   </div>
                   <span className="font-display italic text-xs tracking-wide" style={{ color: C.muted }}>{service.duration}</span>
                 </div>
@@ -186,7 +187,7 @@ export default function Index() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-display italic text-xs tracking-wide transition-colors duration-200 hover:opacity-70"
-                    style={{ color: C.sageMid }}
+                    style={{ color: C.sage }}
                   >
                     Записаться →
                   </a>
@@ -201,12 +202,12 @@ export default function Index() {
       <section className="py-20 px-6" style={{ backgroundColor: C.bgAlt }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.sage }}>Наши работы</p>
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.gold }}>Наши работы</p>
             <h2 className="font-main font-medium tracking-[0.18em] text-3xl uppercase mb-4" style={{ color: C.dark }}>Галерея</h2>
             <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
-              <Icon name="Heart" size={14} style={{ color: C.sage }} />
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
+              <Icon name="Heart" size={14} style={{ color: C.gold }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
             </div>
           </div>
 
@@ -237,12 +238,12 @@ export default function Index() {
       <section className="py-20 px-6" style={{ backgroundColor: C.bg }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
-            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.sage }}>Отзывы</p>
+            <p className="font-display italic text-sm tracking-widest mb-3" style={{ color: C.gold }}>Отзывы</p>
             <h2 className="font-main font-medium tracking-[0.18em] text-3xl uppercase mb-4" style={{ color: C.dark }}>Говорят клиенты</h2>
             <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
-              <Icon name="Star" size={14} style={{ color: C.sage }} />
-              <div className="h-px w-12" style={{ backgroundColor: C.sage, opacity: 0.35 }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
+              <Icon name="Star" size={14} style={{ color: C.gold }} />
+              <div className="h-px w-12" style={{ backgroundColor: C.gold, opacity: 0.5 }} />
             </div>
           </div>
 
@@ -275,7 +276,7 @@ export default function Index() {
                 {/* Stars */}
                 <div className="flex gap-1">
                   {Array.from({ length: review.stars }).map((_, s) => (
-                    <Icon key={s} name="Star" size={13} style={{ color: C.sage }} />
+                    <Icon key={s} name="Star" size={13} style={{ color: C.gold }} />
                   ))}
                 </div>
 
@@ -301,11 +302,11 @@ export default function Index() {
 
       {/* CTA */}
       <section className="py-20 px-6 text-center" style={{ backgroundColor: C.dark }}>
-        <p className="font-display italic text-sm tracking-widest mb-4" style={{ color: C.sage }}>Запись онлайн</p>
+        <p className="font-display italic text-sm tracking-widest mb-4" style={{ color: C.gold }}>Запись онлайн</p>
         <h2 className="font-main font-medium tracking-[0.18em] text-2xl uppercase mb-3" style={{ color: C.cream }}>
           Запишитесь на приём
         </h2>
-        <p className="font-display italic text-base mb-8 max-w-md mx-auto" style={{ color: "#C4B49A" }}>
+        <p className="font-display italic text-base mb-8 max-w-md mx-auto" style={{ color: "#A8C0BA" }}>
           Напишите в мессенджер — ответим быстро и выберем удобное время
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -314,7 +315,7 @@ export default function Index() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-4 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300 hover:opacity-90"
-            style={{ backgroundColor: C.sage, color: C.dark }}
+            style={{ backgroundColor: C.gold, color: C.dark }}
           >
             <Icon name="MessageCircle" size={16} />
             Записаться через Max
@@ -324,7 +325,7 @@ export default function Index() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-4 font-main font-medium tracking-[0.12em] text-sm uppercase transition-all duration-300 hover:opacity-90"
-            style={{ backgroundColor: "transparent", color: C.cream, border: `1px solid ${C.sage}` }}
+            style={{ backgroundColor: "transparent", color: C.cream, border: `1px solid ${C.gold}` }}
           >
             <Icon name="Phone" size={16} />
             WhatsApp
@@ -333,31 +334,31 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.bgAlt, borderTop: "1px solid #E8DCC8" }}>
+      <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.bgAlt, borderTop: `1px solid #C8D8D0` }}>
         <div className="mb-4">
-          <p className="font-display italic text-xs tracking-widest mb-1" style={{ color: C.sage }}>NAIL STUDIO</p>
+          <p className="font-display italic text-xs tracking-widest mb-1" style={{ color: C.gold }}>NAIL STUDIO</p>
           <p className="font-main font-medium tracking-[0.22em] uppercase text-sm" style={{ color: C.dark }}>EFIMOVA IRINA</p>
         </div>
         <p className="font-display italic text-xs mb-1" style={{ color: C.muted }}>с. Корнилово, ул. Лучистая 52</p>
         <p className="font-display italic text-xs mb-4" style={{ color: C.muted }}>+7 913 865-69-61</p>
-        <div className="inline-flex items-center gap-3 mb-5 px-5 py-2.5" style={{ backgroundColor: C.bg, border: "1px solid #E8DCC8" }}>
+        <div className="inline-flex items-center gap-3 mb-5 px-5 py-2.5" style={{ backgroundColor: C.bg, border: `1px solid #C8D8D0` }}>
           <Icon name="Clock" size={13} style={{ color: C.sage }} />
           <span className="font-main font-medium text-xs tracking-[0.12em] uppercase" style={{ color: C.dark }}>9:00 — 21:00</span>
           <span className="font-display italic text-xs" style={{ color: C.muted }}>· по предварительной записи</span>
         </div>
-        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
+        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.gold, opacity: 0.3 }} />
         {/* QR Max */}
         <div className="flex flex-col items-center gap-2 mb-5">
           <p className="font-display italic text-xs tracking-wide" style={{ color: C.muted }}>Записаться через Max — отсканируй QR</p>
           <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&color=3B2314&bgcolor=FAF6EE&data=https%3A%2F%2Fmax.ru%2Fu%2Ff9LHodD0cOJzybHH5nirMGhvF5nIv7dWDLfPGS5hXFog8K1iNpEChCBTXn4"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&color=1A3530&bgcolor=EEF0EB&data=https%3A%2F%2Fmax.ru%2Fu%2Ff9LHodD0cOJzybHH5nirMGhvF5nIv7dWDLfPGS5hXFog8K1iNpEChCBTXn4"
             alt="QR Max"
             width={100}
             height={100}
-            style={{ border: "1px solid #E8DCC8" }}
+            style={{ border: `1px solid #C8D8D0` }}
           />
         </div>
-        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
+        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.gold, opacity: 0.3 }} />
         <p className="font-display italic text-xs mb-3" style={{ color: C.muted }}>С теплом к вашей красоте</p>
         <a
           href="/print"
