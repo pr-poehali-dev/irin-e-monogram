@@ -83,8 +83,8 @@ export default function Print() {
             03 — Табличка на дверь (вертикальная)
           </p>
           <div className="max-w-xs" style={{ backgroundColor: "#3B2314", padding: "32px" }}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440" width="100%">
-              <rect x="16" y="16" width="328" height="408" fill="none" stroke="#C9A97A" strokeWidth="0.8" opacity="0.35"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 500" width="100%">
+              <rect x="16" y="16" width="328" height="468" fill="none" stroke="#C9A97A" strokeWidth="0.8" opacity="0.35"/>
               <text x="108" y="168" fontFamily="Cormorant Infant, Georgia, serif" fontSize="130" fontWeight="300" fill="#FAF6EE">I</text>
               <text x="168" y="168" fontFamily="Cormorant Infant, Georgia, serif" fontSize="130" fontWeight="300" fill="#C9A97A" opacity="0.92">E</text>
               <line x1="70" y1="196" x2="290" y2="196" stroke="#C9A97A" strokeWidth="0.7" opacity="0.4"/>
@@ -92,8 +92,11 @@ export default function Print() {
               <text x="180" y="274" fontFamily="Montserrat, Arial, sans-serif" fontSize="16" fontWeight="500" fill="#FAF6EE" textAnchor="middle" letterSpacing="7">EFIMOVA</text>
               <text x="180" y="300" fontFamily="Montserrat, Arial, sans-serif" fontSize="16" fontWeight="500" fill="#FAF6EE" textAnchor="middle" letterSpacing="7">IRINA</text>
               <line x1="100" y1="322" x2="260" y2="322" stroke="#C9A97A" strokeWidth="0.6" opacity="0.35"/>
-              <text x="180" y="362" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="14" fill="#C9A97A" textAnchor="middle" opacity="0.8">«С теплом к вашей красоте»</text>
-              <text x="180" y="400" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="13" fill="#FAF6EE" textAnchor="middle" opacity="0.5">+7 913 865-69-61</text>
+              <text x="180" y="358" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="13" fill="#C9A97A" textAnchor="middle" opacity="0.7" letterSpacing="2">ГРАФИК РАБОТЫ</text>
+              <text x="180" y="388" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="22" fill="#FAF6EE" textAnchor="middle" letterSpacing="1">9:00 — 21:00</text>
+              <text x="180" y="412" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="13" fill="#C9A97A" textAnchor="middle" opacity="0.6">ежедневно</text>
+              <line x1="100" y1="430" x2="260" y2="430" stroke="#C9A97A" strokeWidth="0.6" opacity="0.35"/>
+              <text x="180" y="460" fontFamily="Cormorant Infant, Georgia, serif" fontStyle="italic" fontSize="13" fill="#FAF6EE" textAnchor="middle" opacity="0.5">+7 913 865-69-61</text>
             </svg>
           </div>
         </div>
