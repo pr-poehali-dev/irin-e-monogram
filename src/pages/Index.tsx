@@ -26,20 +26,29 @@ const services = [
 
 function Monogram() {
   return (
-    <div style={{ width: 110, height: 110, margin: "0 auto 8px" }}>
-      <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" width="110" height="110">
-        {/* I — вертикаль, строгий тёмный шалфей */}
-        <line x1="38" y1="20" x2="38" y2="90" stroke={C.dark} strokeWidth="2.5" strokeLinecap="round"/>
-        {/* I — горизонтальные серифы */}
-        <line x1="30" y1="20" x2="46" y2="20" stroke={C.dark} strokeWidth="2.5" strokeLinecap="round"/>
-        <line x1="30" y1="90" x2="46" y2="90" stroke={C.dark} strokeWidth="2.5" strokeLinecap="round"/>
-
-        {/* E — три горизонтальные черты, мягкий шалфей */}
-        <line x1="52" y1="20" x2="80" y2="20" stroke={C.sage} strokeWidth="2.5" strokeLinecap="round"/>
-        <line x1="52" y1="55" x2="74" y2="55" stroke={C.sage} strokeWidth="2.5" strokeLinecap="round"/>
-        <line x1="52" y1="90" x2="80" y2="90" stroke={C.sage} strokeWidth="2.5" strokeLinecap="round"/>
-        {/* E — вертикаль */}
-        <line x1="52" y1="20" x2="52" y2="90" stroke={C.sage} strokeWidth="2.5" strokeLinecap="round"/>
+    <div style={{ width: 130, height: 110, margin: "0 auto 8px" }}>
+      <svg viewBox="0 0 130 110" fill="none" xmlns="http://www.w3.org/2000/svg" width="130" height="110">
+        {/* I — Cormorant, тонкие засечки, тёмный */}
+        <text
+          x="22"
+          y="92"
+          fontFamily="'Cormorant Infant', 'Georgia', serif"
+          fontSize="96"
+          fontWeight="300"
+          fill={C.dark}
+          letterSpacing="-2"
+        >I</text>
+        {/* E — Cormorant, шалфейный, чуть смещена и прозрачнее для наложения */}
+        <text
+          x="58"
+          y="92"
+          fontFamily="'Cormorant Infant', 'Georgia', serif"
+          fontSize="96"
+          fontWeight="300"
+          fill={C.sage}
+          letterSpacing="-2"
+          opacity="0.92"
+        >E</text>
       </svg>
     </div>
   );
