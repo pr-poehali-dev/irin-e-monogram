@@ -346,6 +346,18 @@ export default function Index() {
           <span className="font-display italic text-xs" style={{ color: C.muted }}>· по предварительной записи</span>
         </div>
         <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
+        {/* QR Max */}
+        <div className="flex flex-col items-center gap-2 mb-5">
+          <p className="font-display italic text-xs tracking-wide" style={{ color: C.muted }}>Записаться через Max — отсканируй QR</p>
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&color=3B2314&bgcolor=FAF6EE&data=https%3A%2F%2Fmax.ru%2Fu%2Ff9LHodD0cOJzybHH5nirMGhvF5nIv7dWDLfPGS5hXFog8K1iNpEChCBTXn4"
+            alt="QR Max"
+            width={100}
+            height={100}
+            style={{ border: "1px solid #E8DCC8" }}
+          />
+        </div>
+        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
         <p className="font-display italic text-xs mb-3" style={{ color: C.muted }}>С теплом к вашей красоте</p>
         <a
           href="/print"
