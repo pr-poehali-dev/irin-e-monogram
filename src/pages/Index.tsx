@@ -3,15 +3,15 @@ import Icon from "@/components/ui/icon";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/fa1fbc0a-9a4a-4633-b66f-8758c3257068.jpg";
 const HANDS_IMAGE = "https://cdn.poehali.dev/projects/ac55f69d-54ba-4d02-8f53-ca36a242ec06/files/f4b41a04-5fab-41af-9e5e-7253defe5a04.jpg";
 
-// Palette: sage green
+// Palette: vanilla + dark chocolate
 const C = {
-  bg: "#F4F7F0",
-  bgAlt: "#EBF0E6",
-  dark: "#2D3828",
-  sage: "#8BA888",
-  sageMid: "#6E8F6B",
-  muted: "#7A8C77",
-  cream: "#F9FAF7",
+  bg: "#FAF6EE",
+  bgAlt: "#F2EBD9",
+  dark: "#3B2314",
+  sage: "#C9A97A",
+  sageMid: "#A8834E",
+  muted: "#8C7155",
+  cream: "#FDF9F2",
   white: "#FFFFFF",
 };
 
