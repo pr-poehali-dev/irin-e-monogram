@@ -311,12 +311,22 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.bgAlt, borderTop: `1px solid #D6E0D3` }}>
+      <footer className="py-10 px-6 text-center" style={{ backgroundColor: C.bgAlt, borderTop: "1px solid #E8DCC8" }}>
         <div className="mb-4">
           <p className="font-display italic text-xs tracking-widest mb-1" style={{ color: C.sage }}>NAIL STUDIO</p>
           <p className="font-main font-medium tracking-[0.22em] uppercase text-sm" style={{ color: C.dark }}>EFIMOVA IRINA</p>
         </div>
-        <p className="font-display italic text-xs" style={{ color: C.muted }}>С теплом к вашей красоте</p>
+        <p className="font-display italic text-xs mb-1" style={{ color: C.muted }}>с. Корнилово, ул. Лучистая 52</p>
+        <p className="font-display italic text-xs mb-5" style={{ color: C.muted }}>+7 913 865-69-61</p>
+        <div className="h-px max-w-xs mx-auto mb-5" style={{ backgroundColor: C.sage, opacity: 0.25 }} />
+        <p className="font-display italic text-xs mb-3" style={{ color: C.muted }}>С теплом к вашей красоте</p>
+        <a
+          href="/print"
+          className="font-display italic text-xs transition-opacity hover:opacity-70"
+          style={{ color: C.sage }}
+        >
+          Макеты для печати →
+        </a>
       </footer>
     </div>
   );
